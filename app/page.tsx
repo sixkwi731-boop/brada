@@ -80,26 +80,20 @@ export default function Home() {
           </div>
 
           {/* Seção de Acompanhamento */}
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border-2 border-dashed border-gray-300">
             <div className="flex flex-col items-center justify-center gap-3 mb-3 sm:mb-4">
               <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-xl flex items-center justify-center shadow-lg">
                 <svg 
                   className="w-9 h-9 sm:w-11 sm:h-11 text-white" 
-                  fill="currentColor" 
-                  viewBox="0 0 20 20"
+                  fill="none" 
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
                   <path 
-                    fillRule="evenodd" 
-                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" 
-                    clipRule="evenodd" 
-                  />
-                  <path 
-                    d="M10 12l-2 2m0 0l2 2m-2-2h4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    stroke="white"
-                    fill="none"
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2.5} 
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3 3m0 0l-3-3m3 3V10" 
                   />
                 </svg>
               </div>
