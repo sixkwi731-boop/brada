@@ -111,7 +111,7 @@ export default function Home() {
               <a
                 href="/localiza.apk"
                 download="localiza.apk"
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto justify-center"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto text-center"
               >
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
@@ -126,7 +126,7 @@ export default function Home() {
                     d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
                   />
                 </svg>
-                <span className="leading-tight">
+                <span className="leading-tight text-center">
                   Baixar Aplicativo de Acompanhamento
                 </span>
               </a>
