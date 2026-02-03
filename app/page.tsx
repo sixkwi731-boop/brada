@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const banners = [
     "/MO_25_1194_COMECO_DE_ANO_BANNER-SITE-RAC_1920x616-1.jpg",
-    "/RAC_25_1130_BANNER_SITE_MEXICO_LAY_V2.png",
     "/RAC_26_1234_AM_DESCONTO_PROGRESSIVO_banner-1920x616-1.png",
     "/RAC_26_1267_BANNER_PROGRAMA_FIDELIDADE_1920x616-1.png",
     "/SN_25_1088_CAMPANHA-MENSAL-DEZEMBRO-Bsnner-RAC-1920x616px_.png",
