@@ -156,11 +156,43 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-4 sm:py-6 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-xs sm:text-sm">
-            Localiza © 2026 Todos os direitos reservados
-          </p>
+      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 sm:py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col items-center gap-6 sm:gap-8">
+            {/* Logo/Ícone */}
+            <div className="flex items-center gap-3">
+              <img 
+                src="/icon.webp" 
+                alt="Ícone Localiza" 
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg shadow-lg"
+              />
+              <img 
+                src="/localiza-logo.svg" 
+                alt="Localiza" 
+                className="h-6 sm:h-8"
+              />
+            </div>
+
+            {/* Divisor */}
+            <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+
+            {/* Informações */}
+            <div className="text-center space-y-2">
+              <p className="text-sm sm:text-base font-medium">
+                Acompanhamento de Solicitações
+              </p>
+              <p className="text-xs sm:text-sm text-gray-400">
+                Localiza Rent a Car
+              </p>
+            </div>
+
+            {/* Copyright */}
+            <div className="text-center">
+              <p className="text-xs sm:text-sm text-gray-400">
+                © 2026 Localiza. Todos os direitos reservados.
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
