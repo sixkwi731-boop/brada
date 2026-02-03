@@ -1,0 +1,8 @@
+INSTRUÇÕES PARA ADICIONAR O BANNER:
+
+1. Substitua o arquivo banner.jpg (ou adicione banner.png) na pasta public/
+2. O banner deve ter proporção similar a 16:9 ou como a imagem da Latam
+3. O arquivo será automaticamente exibido na página
+
+Tamanho recomendado: 1200x600px ou similar
+Formato: JPG ou PNG
