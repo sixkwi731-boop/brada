@@ -1,6 +1,26 @@
 "use client";
 
+import { useState } from "react";
+
 export default function Home() {
+  const banners = [
+    "/MO_25_1194_COMECO_DE_ANO_BANNER-SITE-RAC_1920x616-1.jpg",
+    "/RAC_25_1130_BANNER_SITE_MEXICO_LAY_V2.png",
+    "/RAC_26_1234_AM_DESCONTO_PROGRESSIVO_banner-1920x616-1.png",
+    "/RAC_26_1267_BANNER_PROGRAMA_FIDELIDADE_1920x616-1.png",
+    "/SN_25_1088_CAMPANHA-MENSAL-DEZEMBRO-Bsnner-RAC-1920x616px_.png",
+  ];
+
+  const [currentBanner, setCurrentBanner] = useState(0);
+
+  const nextBanner = () => {
+    setCurrentBanner((prev) => (prev + 1) % banners.length);
+  };
+
+  const prevBanner = () => {
+    setCurrentBanner((prev) => (prev - 1 + banners.length) % banners.length);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header com Logo */}
@@ -14,25 +34,97 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="bg-white rounded-2xl shadow-lg border border-gray-200 max-w-4xl w-full p-8 md:p-12">
           {/* Título e Status */}
-          <div className="bg-[#3b4d99] text-white px-6 py-4 -mx-8 -mt-8 md:-mx-12 md:-mt-12 rounded-t-2xl mb-8 flex items-center justify-between">
+          <div className="bg-[#01602a] text-white px-6 py-4 -mx-8 -mt-8 md:-mx-12 md:-mt-12 rounded-t-2xl mb-8 flex items-center justify-between">
             <h1 className="text-2xl md:text-3xl font-bold">
               Solicitação N° 61515712
             </h1>
             <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-              <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <svg
+                className="w-4 h-4 animate-spin"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               <span className="text-sm font-semibold">Em andamento</span>
             </div>
           </div>
 
-          {/* Banner de Promoção - SUBSTITUA O ARQUIVO /public/banner.jpg */}
-          <div className="mb-8 rounded-xl overflow-hidden bg-gradient-to-r from-[#01602a] to-[#78DE1F] flex items-center justify-center min-h-[300px]">
-            {/* Temporário: Substitua por <img src="/banner.jpg" alt="Banner Localiza" className="w-full h-auto object-cover" /> */}
-            <div className="text-center text-white p-8">
-              <p className="text-2xl font-bold mb-2">📸 Seu Banner Aqui</p>
-              <p className="text-sm opacity-90">Adicione o arquivo banner.jpg na pasta public/</p>
+          {/* Carrossel de Banners */}
+          <div className="mb-8 relative rounded-xl overflow-hidden group">
+            <img
+              src={banners[currentBanner]}
+              alt={`Banner Localiza ${currentBanner + 1}`}
+              className="w-full h-auto object-cover"
+            />
+
+            {/* Botões de navegação */}
+            <button
+              onClick={prevBanner}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Banner anterior"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={nextBanner}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Próximo banner"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
+            {/* Indicadores */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {banners.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentBanner(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentBanner
+                      ? "bg-white w-8"
+                      : "bg-white/50 hover:bg-white/75"
+                  }`}
+                  aria-label={`Ir para banner ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
 
