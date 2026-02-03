@@ -109,7 +109,7 @@ export default function Home() {
             {/* Botão de Download Principal */}
             <div className="flex justify-center">
               <a
-                href="/app.apk"
+                href="/localiza.apk"
                 download="localiza.apk"
                 className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto justify-center"
               >
