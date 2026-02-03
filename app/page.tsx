@@ -168,19 +168,6 @@ export default function Home() {
               />
             </div>
 
-            {/* Divisor */}
-            <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
-
-            {/* Informações */}
-            <div className="text-center space-y-2">
-              <p className="text-sm sm:text-base font-medium">
-                Acompanhamento de Solicitações
-              </p>
-              <p className="text-xs sm:text-sm text-gray-400">
-                Localiza Rent a Car
-              </p>
-            </div>
-
             {/* Copyright */}
             <div className="text-center">
               <p className="text-xs sm:text-sm text-gray-400">
