@@ -8,10 +8,42 @@
   box-sizing: border-box;
 }
 
+html {
+  /* Tamanho base de fonte responsivo */
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
   min-height: 100vh;
+  /* Melhor legibilidade de texto */
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+/* Melhorar touch targets em mobile */
+@media (max-width: 768px) {
+  button,
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Garantir que imagens sejam sempre responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

