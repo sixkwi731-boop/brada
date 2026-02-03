@@ -159,17 +159,12 @@ export default function Home() {
       <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 sm:py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-6 sm:gap-8">
-            {/* Logo/Ícone */}
-            <div className="flex items-center gap-3">
-              <img 
-                src="/icon.webp" 
-                alt="Ícone Localiza" 
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg shadow-lg"
-              />
+            {/* Logo */}
+            <div>
               <img 
                 src="/localiza-logo.svg" 
                 alt="Localiza" 
-                className="h-6 sm:h-8"
+                className="h-8 sm:h-10"
               />
             </div>
 

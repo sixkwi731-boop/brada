@@ -4,6 +4,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Localiza - Acompanhamento de Solicitação',
   description: 'Acompanhe sua solicitação Localiza em tempo real',
+  icons: {
+    icon: '/icon.webp',
+    apple: '/icon.webp',
+  },
 }
 
 export const viewport: Viewport = {
