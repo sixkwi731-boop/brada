@@ -2,7 +2,7 @@
 
 ## ✅ Site Criado com Sucesso!
 
-O site está pronto e replicando o layout do site da Latam, mas adaptado para Localiza.
+O site está pronto e replicando o layout do site da Latam, mas adaptado para Bradesco.
 
 ## 🎯 Próximos Passos
 
@@ -40,7 +40,7 @@ Acesse: http://localhost:3000
 ```bash
 git init
 git add .
-git commit -m "Primeiro commit - Site Localiza"
+git commit -m "Primeiro commit - Site Bradesco"
 git branch -M main
 git remote add origin https://github.com/seu-usuario/seu-repo.git
 git push -u origin main
@@ -80,15 +80,17 @@ git push
 Edite `app/page.tsx`:
 
 **Cor dos botões:**
+
 ```tsx
 // Linha ~68 - Botão principal
-className="bg-gradient-to-r from-green-500 to-green-600..."
+className = "bg-gradient-to-r from-green-500 to-green-600...";
 // Altere green-500/600 para a cor desejada (blue, purple, red, etc)
 ```
 
 **Cor de fundo do site:**
 
 Edite `app/globals.css`:
+
 ```css
 /* Linha ~16 */
 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -111,12 +113,12 @@ Edite `app/page.tsx`:
 
 ```tsx
 // Substitua:
-<div className="text-3xl font-bold text-green-600">
-  Localiza
+<div className="text-3xl font-bold text-red-600">
+  Bradesco
 </div>
 
 // Por:
-<img src="/logo.png" alt="Localiza" className="h-12" />
+<img src="/logo.png" alt="Bradesco" className="h-12" />
 ```
 
 ## 🌟 Características do Site

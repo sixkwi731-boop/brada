@@ -1,30 +1,30 @@
-import type { Metadata, Viewport } from 'next'
-import './globals.css'
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Localiza - Acompanhamento de Solicitação',
-  description: 'Acompanhe sua solicitação Localiza em tempo real',
+  title: "Bradesco - Acompanhamento de Solicitação",
+  description: "Acompanhe sua solicitação Bradesco em tempo real",
   icons: {
-    icon: '/icon.webp',
-    apple: '/icon.webp',
+    icon: "/icons8-bradesco-240.svg",
+    apple: "/icons8-bradesco-240.svg",
   },
-}
+};
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt-BR">
       <body>{children}</body>
     </html>
-  )
+  );
 }
